@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Better | Centro Especializado en Sueño</title>
+    <meta name="description"
+        content="Centro especializado en diagnóstico y tratamiento de trastornos del sueño (apnea). Equipos CPAP/BiPAP y accesorios en Santo Domingo, RD.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div class="page-transition-wrapper">
+
+        <header id="main-header">
+            <div class="container header-content">
+                <a href="index.html#inicio" class="logo">
+                    <img src="logo.png" alt="Sleep Better" class="logo-img">
+                </a>
+
+                <nav id="desktop-nav" class="nav-menu">
+                    <ul>
+                        <li><a href="index.html#inicio">Inicio</a></li>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="btn btn-primary btn-pulse" onclick="openModal('agendarModal')">Agendar
+                        evaluación</button>
+                    <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main style="padding-top: 150px;">
+            <section id="productos" class="premium-catalog-section"
+                style="background-color: #ffffff; padding: 100px 0; overflow: hidden; position: relative;">
+                <!-- Particle Background Canvas -->
+                <canvas id="product-particles"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>
+
+                <div class="container reveal" style="position: relative; z-index: 1;">
+                    <div class="catalog-header" style="margin-bottom: 60px; position: relative; z-index: 1;">
+                        <span class="section-tag"
+                            style="background: rgba(96, 168, 216, 0.1); color: var(--primary); padding: 8px 16px; border-radius: 30px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; border: 1px solid rgba(96, 168, 216, 0.2); margin-bottom: 20px; display: inline-block;">Catálogo
+                            Premium 2026</span>
+                        <h2
+                            style="font-size: 48px; font-weight: 800; color: #0b1b2b; letter-spacing: -1px; margin-bottom: 15px; background: linear-gradient(135deg, #0b1b2b 0%, #2b79b7 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                            Nuestras Soluciones</h2>
+                        <p style="font-size: 18px; color: #50667a; max-width: 600px; line-height: 1.6;">Explore nuestra
+                            gama
+                            de equipos de vanguardia diseñados para transformar su descanso y salud respiratoria.</p>
+                    </div>
+
+                    <div class="products-grid">
+                        <!-- Card 1 -->
+                        <div class="premium-product-card" data-category="cpap"
+                            onclick="window.openProductDetail('dreamstation.png', 'Respironic DreamStation', 'Auto CPAP inteligente de diseño compacto.')">
+                            <div class="card-badge">Top Ventas</div>
+                            <div class="card-image-wrapper">
+                                <img src="dreamstation.png" alt="Respironic DreamStation">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Respironic DreamStation - Auto CPAP Inteligente con Humidificador
+                                </h3>
+                                <div class="card-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="count">(1,245)</span>
+                                </div>
+                                <div class="card-sales">100+ comprados el mes pasado</div>
+                                <div class="card-price">
+                                    <span class="symbol">$</span>
+                                    <span class="integer">1,299</span>
+                                    <span class="decimal">99</span>
+                                </div>
+                                <div class="card-extra-info">
+                                    <p class="delivery">Envío <b>GRATIS</b></p>
+                                    <p class="delivery-time">Recíbelo en 24-48 horas</p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-quote"
+                                        onclick="event.stopPropagation(); window.quoteProduct('Respironic DreamStation')">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="premium-product-card" data-category="masks"
+                            onclick="window.openProductDetail('mascarillas_premium.png', 'Mascarillas', 'Contamos con una amplia variedad de mascarillas.')">
+                            <div class="card-image-wrapper">
+                                <img src="mascarillas_premium.png" alt="Mascarillas">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Línea de Confort Premium - Mascarillas Nasales y Full Face</h3>
+                                <div class="card-rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="count">(842)</span>
+                                </div>
+                                <div class="card-sales">200+ comprados el mes pasado</div>
+                                <div class="card-price">
+                                    <span class="symbol">$</span>
+                                    <span class="integer">150</span>
+                                    <span class="decimal">00</span>
+                                </div>
+                                <div class="card-extra-info">
+                                    <p class="delivery">Envío <b>GRATIS</b></p>
+                                    <p class="delivery-time">Disponible para entrega inmediata</p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-quote"
+                                        onclick="event.stopPropagation(); window.quoteProduct('Mascarillas Línea de Confort')">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="premium-product-card" data-category="accessories"
+                            onclick="window.openProductDetail('accesorios_premium.png', 'Accesorios', 'Complete su equipo con nuestros accesorios originales.')">
+                            <div class="card-image-wrapper">
+                                <img src="accesorios_premium.png" alt="Accesorios">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Accesorios de Élite - Filtros, Tubos y Humidificadores</h3>
+                                <div class="card-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="count">(512)</span>
+                                </div>
+                                <div class="card-sales">50+ comprados el mes pasado</div>
+                                <div class="card-price">
+                                    <span class="symbol">$</span>
+                                    <span class="integer">45</span>
+                                    <span class="decimal">99</span>
+                                </div>
+                                <div class="card-extra-info">
+                                    <p class="delivery">Envío <b>GRATIS</b> en pedidos selectos</p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-quote"
+                                        onclick="event.stopPropagation(); window.quoteProduct('Accesorios de Élite')">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="premium-product-card" data-category="maintenance"
+                            onclick="window.openProductDetail('mantenimiento_premium.png', 'Mantenimiento', 'Mantenga su equipo libre de bacterias.')">
+                            <div class="card-image-wrapper">
+                                <img src="mantenimiento_premium.png" alt="Mantenimiento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Cuidado Intensivo - Kits de Limpieza y Desinfección UV/Ozono</h3>
+                                <div class="card-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="count">(124)</span>
+                                </div>
+                                <div class="card-price">
+                                    <span class="symbol">$</span>
+                                    <span class="integer">199</span>
+                                    <span class="decimal">00</span>
+                                </div>
+                                <div class="card-extra-info">
+                                    <p class="delivery">Envío <b>GRATIS</b></p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-quote"
+                                        onclick="event.stopPropagation(); window.quoteProduct('Kits de Mantenimiento')">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5: Resmed AirCurve 10 -->
+                        <div class="premium-product-card" data-category="cpap"
+                            onclick="window.openProductDetail('https://placehold.co/800x600/ffffff/0b1b2b?text=Resmed+AirCurve+10', 'Resmed AirCurve 10', 'El AirCurve 10 S es ideal para los pacientes con apnea del sueño.')">
+                            <div class="card-badge">Tecnología S</div>
+                            <div class="card-image-wrapper">
+                                <img src="https://placehold.co/400x200/ffffff/0b1b2b?text=AirCurve+10"
+                                    alt="Resmed AirCurve 10">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Resmed AirCurve 10 - Sistema Bi-Level de Presión Variable</h3>
+                                <div class="card-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="count">(328)</span>
+                                </div>
+                                <div class="card-price">
+                                    <span class="symbol">$</span>
+                                    <span class="integer">2,499</span>
+                                    <span class="decimal">00</span>
+                                </div>
+                                <div class="card-extra-info">
+                                    <p class="delivery">Envío <b>GRATIS</b></p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-quote"
+                                        onclick="event.stopPropagation(); window.quoteProduct('Resmed AirCurve 10')">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: ResMed AirSense 10 -->
+                        <div class="premium-product-card" data-category="cpap"
+                            onclick="window.openProductDetail('https://placehold.co/800x600/ffffff/0b1b2b?text=ResMed+AirSense+10', 'ResMed AirSense 10', 'El ResMed AirSense 10 CPAP es un dispositivo básico.')">
+                            <div class="card-badge">Conectividad 4G</div>
+                            <div class="card-image-wrapper">
+                                <img src="https://placehold.co/400x200/ffffff/0b1b2b?text=AirSense+10"
+                                    alt="ResMed AirSense 10">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">ResMed AirSense 10 - AutoSet con Humidificador y Monitoreo Remoto
+                                </h3>
+                                <div class="card-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="count">(1,102)</span>
+                                </div>
+                                <div class="card-price">
+                                    <span class="symbol">$</span>
+                                    <span class="integer">1,899</span>
+                                    <span class="decimal">00</span>
+                                </div>
+                                <div class="card-extra-info">
+                                    <p class="delivery">Envío <b>GRATIS</b></p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-quote"
+                                        onclick="event.stopPropagation(); window.quoteProduct('ResMed AirSense 10')">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: AirFit P10 -->
+                        <div class="premium-product-card" data-category="masks"
+                            onclick="window.openProductDetail('https://placehold.co/800x600/ffffff/0b1b2b?text=AirFit+P10', 'ResMed AirFit P10', 'La máscara nasal de almohadas ResMed AirFit™ P10.')">
+                            <div class="card-badge">Más Silenciosa</div>
+                            <div class="card-image-wrapper">
+                                <img src="https://placehold.co/400x200/ffffff/0b1b2b?text=AirFit+P10"
+                                    alt="ResMed AirFit P10">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">ResMed AirFit P10 - Máscara Nasal Silenciosa y Ligera</h3>
+                                <div class="card-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="count">(4,512)</span>
+                                </div>
+                                <div class="card-price">
+                                    <span class="symbol">$</span>
+                                    <span class="integer">120</span>
+                                    <span class="decimal">00</span>
+                                </div>
+                                <div class="card-extra-info">
+                                    <p class="delivery">Envío <b>GRATIS</b></p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-quote"
+                                        onclick="event.stopPropagation(); window.quoteProduct('ResMed AirFit P10')">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: Philips Wisp -->
+                        <div class="premium-product-card" data-category="masks"
+                            onclick="window.openProductDetail('https://placehold.co/800x600/ffffff/0b1b2b?text=Philips+Wisp', 'Philips Respironic Wisp', 'Wisp combina el rendimiento y la comodidad.')">
+                            <div class="card-image-wrapper">
+                                <img src="https://placehold.co/400x200/ffffff/0b1b2b?text=Philips+Wisp"
+                                    alt="Philips Respironic Wisp">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Philips Respironic Wisp - Máscara Nasal de Diseño Mínimo</h3>
+                                <div class="card-rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="count">(921)</span>
+                                </div>
+                                <div class="card-price">
+                                    <span class="symbol">$</span>
+                                    <span class="integer">99</span>
+                                    <span class="decimal">00</span>
+                                </div>
+                                <div class="card-extra-info">
+                                    <p class="delivery">Envío <b>GRATIS</b></p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-quote"
+                                        onclick="event.stopPropagation(); window.quoteProduct('Philips Respironic Wisp')">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+    </div>
+    </section>
+
+    <section class="brands-section reveal">
+        <div class="container">
+            <h2 class="brands-title stagger">Confiamos en nuestras marcas</h2>
+            <div class="brands-grid">
+                <div class="brand-card stagger">
+                    <div class="brand-logo-wrapper">
+                        <img src="resmed-logo.png" alt="ResMed" style="filter: none; opacity: 1; max-height: 100px;">
+                    </div>
+                    <p class="brand-text">ResMed es una empresa pionera en soluciones innovadoras que tratan y
+                        mantienen a las personas fuera del hospital, permitiéndoles vivir vidas más saludables y de
+                        mayor calidad.</p>
+                </div>
+
+                <div class="brand-card stagger">
+                    <div class="brand-logo-wrapper">
+                        <img src="philips-logo.png" alt="Philips Respironics"
+                            style="filter: none; opacity: 1; max-height: 85px;">
+                    </div>
+                    <p class="brand-text">Como líder mundial en los mercados del sueño y la respiración, nos
+                        apasiona brindar soluciones que conduzcan a pacientes, prácticas y negocios más saludables.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid reveal">
+            <div class="footer-brand stagger">
+                <img src="logo.png" alt="Sleep Better" class="footer-logo-img">
+                <p>Sleep Better es un centro especializado en diagnóstico y tratamiento de trastornos del sueño,
+                    enfocado especialmente en apnea del sueño.</p>
+            </div>
+            <div class="footer-links stagger">
+                <h4>Secciones</h4>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-legal stagger">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Aviso médico</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact stagger">
+                <h4>Comparte con nosotros</h4>
+                <ul>
+                    <li><a href="mailto:drmejiabiaggi@sleepbetterdr.com">
+                            <svg class="footer-icon-neon icon-neon-email" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            Email: drmejiabiaggi@sleepbetterdr.com</a></li>
+                    <li><a href="https://www.instagram.com/sleepbetterrd" target="_blank">
+                            <svg class="footer-icon-neon icon-neon-insta" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            Instagram: @sleepbetterrd</a></li>
+                    <li><a href="https://wa.me/18099608092" target="_blank">
+                            <svg class="footer-icon-neon icon-neon-wa" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z">
+                                </path>
+                            </svg>
+                            WhatsApp: +1-809-960-8092</a></li>
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Avenida+John+F.+Kennedy+Plaza+Galeria+360+local+L-87+Santo+Domingo+10510"
+                            target="_blank">
+                            <svg class="footer-icon-neon icon-neon-map" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Av. John F. Kennedy, Galería 360, Nivel 1, Local L-87</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sleep Better. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button 2026 Premium Removed -->
+
+    <!-- Product Details Modal -->
+    <div id="productDetailsModal" class="modal">
+        <div class="modal-content product-details-content premium-glass">
+            <span class="close-modal" onclick="closeModal('productDetailsModal')">&times;</span>
+            <div class="product-details-grid">
+                <div class="product-details-image">
+                    <img id="detail-image" src="" alt="">
+                </div>
+                <div class="product-details-info">
+                    <h2 id="detail-title" class="stagger"></h2>
+                    <p id="detail-description" class="stagger"></p>
+                    <div class="product-details-actions stagger">
+                        <button id="detail-quote-btn" class="btn btn-primary btn-full">Pedir cotización</button>
+                        <a id="detail-whatsapp-btn" href="#" target="_blank" class="btn btn-outline btn-full"
+                            style="margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 10px; border-color: #25D366; color: #25D366;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512"
+                                fill="currentColor">
+                                <path
+                                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.2 3.7-5.5 5.5-9.3 1.9-3.7.9-6.9-.5-9.8-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                            </svg>
+                            Solicitar cotización por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agendar Modal -->
+    <div id="agendarModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('agendarModal')">&times;</span>
+            <h2 id="modal-title">Agendar evaluación</h2>
+            <p>Déjanos tus datos y te contactaremos a la brevedad para coordinar.</p>
+            <form class="contact-form"
+                onsubmit="event.preventDefault(); alert('Solicitud enviada exitosamente. Nos contactaremos pronto.'); closeModal('agendarModal');">
+                <input type="hidden" id="modal-context" name="context" value="">
+                <div class="form-group">
+                    <label for="modal-name">Nombre completo</label>
+                    <input type="text" id="modal-name" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="modal-phone">Teléfono</label>
+                    <input type="tel" id="modal-phone" required placeholder="Tu teléfono">
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email</label>
+                    <input type="email" id="modal-email" required placeholder="tu@email.com">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Enviar solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+        <div class="drawer-header">
+            <img src="logo.png" alt="Sleep Better" class="logo-drawer">
+            <button class="close-drawer" onclick="toggleMenu()" aria-label="Cerrar menú">&times;</button>
+        </div>
+        <nav class="drawer-nav">
+            <ul>
+                <li><a href="index.html#inicio" onclick="toggleMenu()">Inicio</a></li>
+                <li><a href="index.html#servicios" onclick="toggleMenu()">Servicios</a></li>
+                <li><a href="productos.html" onclick="toggleMenu()">Productos</a></li>
+                <li><a href="faq.html" onclick="toggleMenu()">FAQ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="drawer-overlay" class="drawer-overlay" onclick="toggleMenu()"></div>
+
+    </div>
+    <!-- Floating WhatsApp Button 2026 Premium -->
+    <a href="https://wa.me/18099608092" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 448 512" fill="#fff">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.2 3.7-5.5 5.5-9.3 1.9-3.7.9-6.9-.5-9.8-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
